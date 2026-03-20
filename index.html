@@ -199,6 +199,7 @@ nav.scrolled{background:rgba(10,10,10,.92);backdrop-filter:blur(24px);-webkit-ba
   background:linear-gradient(135deg,rgba(255,69,0,.2),rgba(255,69,0,.05));
   display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--primary);
   border:1px solid rgba(255,69,0,.15)}
+.hg-emoji{font-size:36px;margin-bottom:14px;filter:drop-shadow(0 2px 8px rgba(255,69,0,.3))}
 .scroll-indicator{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:5;
   display:flex;flex-direction:column;align-items:center;gap:8px;animation:scrollBounce 2s infinite;cursor:pointer}
 .scroll-indicator .mouse{width:24px;height:38px;border:2px solid rgba(255,255,255,.25);border-radius:12px;position:relative}
@@ -261,6 +262,9 @@ nav.scrolled{background:rgba(10,10,10,.92);backdrop-filter:blur(24px);-webkit-ba
   box-shadow:0 8px 24px var(--shadow-color);margin-top:-38px;position:relative;z-index:1;
   transition:all .4s}
 .srv-card:hover .srv-icon-wrap{transform:scale(1.1) rotate(-5deg);box-shadow:0 12px 32px var(--shadow-color)}
+.srv-emoji{font-size:42px;margin-top:-32px;margin-bottom:14px;position:relative;z-index:1;
+  filter:drop-shadow(0 4px 12px rgba(255,69,0,.3));transition:all .4s}
+.srv-card:hover .srv-emoji{transform:scale(1.2) rotate(-5deg)}
 .srv-name{font-weight:700;font-size:20px;margin-bottom:8px;font-family:var(--heading)}
 .srv-desc{color:var(--muted);font-size:14px;line-height:1.8}
 
@@ -276,12 +280,11 @@ nav.scrolled{background:rgba(10,10,10,.92);backdrop-filter:blur(24px);-webkit-ba
   -webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .5s}
 .why-card:hover::before{opacity:1}
 .why-card:hover{transform:translateY(-8px);box-shadow:0 24px 48px rgba(0,0,0,.3)}
-.why-icon{width:72px;height:72px;border-radius:20px;margin:0 auto 20px;
-  background:linear-gradient(135deg,rgba(255,69,0,.1),rgba(255,69,0,.03));
-  display:flex;align-items:center;justify-content:center;font-size:32px;
-  border:1px solid rgba(255,69,0,.1);transition:all .4s}
-.why-card:hover .why-icon{background:linear-gradient(135deg,var(--primary),var(--accent));
-  border-color:transparent;transform:scale(1.1);box-shadow:var(--glow)}
+.why-icon{width:80px;height:80px;border-radius:24px;margin:0 auto 20px;
+  background:transparent;
+  display:flex;align-items:center;justify-content:center;font-size:48px;
+  border:none;transition:all .4s}
+.why-card:hover .why-icon{transform:scale(1.2) rotate(-5deg)}
 .why-card h3{font-size:18px;font-weight:700;margin-bottom:8px}
 .why-card p{color:var(--muted);font-size:14px;line-height:1.7}
 
@@ -590,12 +593,12 @@ footer{padding:60px 24px 32px;background:var(--surface);border-top:1px solid var
     </div>
     <div class="hero-right">
       <div class="hero-glass">
-        <div class="hg-icon"><i data-lucide="dumbbell"></i></div>
+        <div class="hg-emoji">🏋️</div>
         <h3>700 m² treenitilaa</h3>
         <p>Vapaat painot, modernit laitteet ja kardioalue — kaikki saman katon alla.</p>
       </div>
       <div class="hero-glass">
-        <div class="hg-icon"><i data-lucide="clock"></i></div>
+        <div class="hg-emoji">🕐</div>
         <h3>Avoinna 24/7</h3>
         <p>Treenaa milloin haluat. Kulkuavain toimii ympäri vuorokauden, joka päivä.</p>
       </div>
@@ -655,7 +658,7 @@ footer{padding:60px 24px 32px;background:var(--surface);border-top:1px solid var
 <!-- SERVICES -->
 <section class="services" id="palvelut">
   <div class="section-header reveal">
-    <div class="section-eyebrow">&#9878; Palvelut</div>
+    <div class="section-eyebrow">🏋️ Palvelut</div>
     <div class="section-title">Kaikki mitä tarvitset</div>
     <div class="section-sub">Monipuoliset palvelut ja laadukkaat välineet kaikentasoisille kuntoilijoille — sauna ja uima-allas sisältyvät jokaiseen jäsenyyteen.</div>
   </div>
@@ -663,40 +666,40 @@ footer{padding:60px 24px 32px;background:var(--surface);border-top:1px solid var
     <div class="srv-card reveal">
       <div class="srv-card-img"><img src="https://www.gymholvi.fi/wp-content/uploads/2024/11/holvi-2-768x576.jpeg" alt="Vapaat painot" loading="lazy"></div>
       <div class="srv-card-body">
-        <div class="srv-icon-wrap"><i data-lucide="dumbbell"></i></div>
-        <div class="srv-name">&#9878; Vapaat painot</div>
+        <div class="srv-emoji">🏋️</div>
+        <div class="srv-name">Vapaat painot</div>
         <div class="srv-desc">Kattava valikoima vapaita painoja aina käsipainoista olympiatankoihin. Treenaamiseen on tilaa ja välineitä riittää.</div>
       </div>
     </div>
     <div class="srv-card reveal">
       <div class="srv-card-img"><img src="https://www.gymholvi.fi/wp-content/uploads/2024/11/holvi-3-768x576.jpeg" alt="Modernit laitteet" loading="lazy"></div>
       <div class="srv-card-body">
-        <div class="srv-icon-wrap"><i data-lucide="settings"></i></div>
-        <div class="srv-name">&#9881; Modernit laitteet</div>
+        <div class="srv-emoji">⚙️</div>
+        <div class="srv-name">Modernit laitteet</div>
         <div class="srv-desc">Uusimmat kuntosalilaitteet johtavilta valmistajilta. Laadukkaat ja hyvin huolletut välineet tehokkaaseen harjoitteluun.</div>
       </div>
     </div>
     <div class="srv-card reveal">
       <div class="srv-card-img"><img src="https://www.gymholvi.fi/wp-content/uploads/2024/11/holvi-35-768x576.jpeg" alt="Sauna ja uima-allas" loading="lazy"></div>
       <div class="srv-card-body">
-        <div class="srv-icon-wrap"><i data-lucide="waves"></i></div>
-        <div class="srv-name">&#9832; Sauna &amp; uima-allas</div>
+        <div class="srv-emoji">🧖</div>
+        <div class="srv-name">Sauna &amp; uima-allas</div>
         <div class="srv-desc">Rentoudu treenin jälkeen saunassa tai virkistäydy uima-altaassa. Kaikki sisältyy jäsenyyteen ilman lisämaksua.</div>
       </div>
     </div>
     <div class="srv-card reveal">
       <div class="srv-card-img"><img src="https://www.gymholvi.fi/wp-content/uploads/2024/11/holvi-36-768x576.jpeg" alt="Kardioalue" loading="lazy"></div>
       <div class="srv-card-body">
-        <div class="srv-icon-wrap"><i data-lucide="heart-pulse"></i></div>
-        <div class="srv-name">&#9829; Kardioalue</div>
+        <div class="srv-emoji">❤️‍🔥</div>
+        <div class="srv-name">Kardioalue</div>
         <div class="srv-desc">Juoksumatot, crosstrainerit, soutulaitteet ja pyörät. Monipuoliset kardiovaihtoehdot kunnon parantamiseen.</div>
       </div>
     </div>
     <div class="srv-card reveal">
       <div class="srv-card-img"><img src="https://www.gymholvi.fi/wp-content/uploads/2024/11/holvi-39-768x576.jpeg" alt="Venyttely ja kehonhuolto" loading="lazy"></div>
       <div class="srv-card-body">
-        <div class="srv-icon-wrap"><i data-lucide="stretch-horizontal"></i></div>
-        <div class="srv-name">&#10024; Venyttely ja kehonhuolto</div>
+        <div class="srv-emoji">🧘</div>
+        <div class="srv-name">Venyttely ja kehonhuolto</div>
         <div class="srv-desc">Erillinen alue venyttelylle ja kehonhuollolle. Foam rollerit, vastuskuminauhat ja jooga-matot käytössä.</div>
       </div>
     </div>
@@ -709,38 +712,38 @@ footer{padding:60px 24px 32px;background:var(--surface);border-top:1px solid var
 <!-- WHY US — NEW SECTION -->
 <section class="why-us">
   <div class="section-header reveal">
-    <div class="section-eyebrow">&#9733; Miksi GymHolvi</div>
+    <div class="section-eyebrow">⭐ Miksi GymHolvi</div>
     <div class="section-title">Enemmän kuin kuntosali</div>
     <div class="section-sub">Olemme rakentaneet paikan, jossa jokainen tuntee olonsa tervetulleeksi.</div>
   </div>
   <div class="why-grid">
     <div class="why-card reveal">
-      <div class="why-icon">&#128272;</div>
+      <div class="why-icon">🔑</div>
       <h3>24/7 kulkuavain</h3>
       <p>Treenaa omaan tahtiisi, milloin tahansa. Aamuyöllä tai lounastauolla — sinä päätät.</p>
     </div>
     <div class="why-card reveal">
-      <div class="why-icon">&#128176;</div>
+      <div class="why-icon">💰</div>
       <h3>Reilu hinta alk. 29€/kk</h3>
       <p>Ei piilokustannuksia, ei liittymismaksuja. Kuntosali + sauna + allas yhdellä hinnalla.</p>
     </div>
     <div class="why-card reveal">
-      <div class="why-icon">&#127942;</div>
+      <div class="why-icon">🏆</div>
       <h3>Kannustava yhteisö</h3>
       <p>Meillä treenaavat kaikentasoiset kuntoilijat. Yhteisömme kannustaa ja motivoi eteenpäin.</p>
     </div>
     <div class="why-card reveal">
-      <div class="why-icon">&#9832;</div>
+      <div class="why-icon">🧖‍♂️</div>
       <h3>Sauna &amp; uima-allas</h3>
       <p>Rentoudu treenin jälkeen saunassa tai vilvoitu uima-altaassa — sisältyy jokaiseen jäsenyyteen.</p>
     </div>
     <div class="why-card reveal">
-      <div class="why-icon">&#128179;</div>
+      <div class="why-icon">💳</div>
       <h3>Monipuoliset maksutavat</h3>
       <p>Epassi, Smartum, Edenred, MobilePay, Visa, Mastercard — maksa kuten sinulle sopii.</p>
     </div>
     <div class="why-card reveal">
-      <div class="why-icon">&#128170;</div>
+      <div class="why-icon">💪</div>
       <h3>700 m² treenitilaa</h3>
       <p>Vapaat painot, modernit laitteet, kardioalue ja venyttelytila — kaikki saman katon alla.</p>
     </div>
@@ -751,7 +754,7 @@ footer{padding:60px 24px 32px;background:var(--surface);border-top:1px solid var
 <section class="pricing" id="hinnasto">
   <div class="pricing-wrap">
     <div class="section-header reveal">
-      <div class="section-eyebrow">&#128176; Hinnasto</div>
+      <div class="section-eyebrow">💰 Hinnasto</div>
       <div class="section-title">Edulliset hinnat kaikille</div>
       <div class="section-sub">Valitse sinulle sopivin jäsenyysvaihtoehto — kaikki sisältävät pääsyn kaikkiin tiloihin ja laitteisiin.</div>
     </div>
@@ -929,7 +932,7 @@ footer{padding:60px 24px 32px;background:var(--surface);border-top:1px solid var
 <section class="reviews" id="arvostelut">
   <div class="reviews-wrap">
     <div class="section-header reveal">
-      <div class="section-eyebrow">&#11088; Arvostelut</div>
+      <div class="section-eyebrow">⭐ Arvostelut</div>
       <div class="section-title">Jäsentemme kokemuksia</div>
       <div class="section-sub">Aito palaute tyytyväisiltä treenaajilta</div>
     </div>
@@ -966,7 +969,7 @@ footer{padding:60px 24px 32px;background:var(--surface);border-top:1px solid var
 <section class="gallery" id="galleria">
   <div class="gallery-wrap">
     <div class="section-header reveal">
-      <div class="section-eyebrow">&#128247; Galleria</div>
+      <div class="section-eyebrow">📸 Galleria</div>
       <div class="section-title">Tutustu tiloihimme</div>
     </div>
     <div class="gallery-grid">
@@ -996,7 +999,7 @@ footer{padding:60px 24px 32px;background:var(--surface);border-top:1px solid var
 
 <!-- PAYMENT METHODS -->
 <section class="payment-section">
-  <div class="payment-title">&#128179; Hyväksymme maksutavat</div>
+  <div class="payment-title">💳 Hyväksymme maksutavat</div>
   <div class="payment-grid">
     <div class="payment-badge">Visa</div>
     <div class="payment-badge">Mastercard</div>
